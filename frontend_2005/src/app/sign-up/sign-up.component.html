@@ -1,0 +1,117 @@
+<head>	
+
+		<title>Login V15</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 
+		<link rel="icon" type="image/png" href="./assets/images/icons/favicon.ico"/>
+	 
+		<link rel="stylesheet" type="text/css" href="./assets/vendor/bootstrap/css/bootstrap.min.css">
+	 
+		<link rel="stylesheet" type="text/css" href="./assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	 
+		<link rel="stylesheet" type="text/css" href="./assets/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+	 
+		<link rel="stylesheet" type="text/css" href="./assets/vendor/animate/animate.css">
+		 
+		<link rel="stylesheet" type="text/css" href="./assets/vendor/css-hamburgers/hamburgers.min.css">
+	 
+		<link rel="stylesheet" type="text/css" href="./assets/vendor/animsition/css/animsition.min.css">
+	 
+		<link rel="stylesheet" type="text/css" href="./assets/vendor/select2/select2.min.css">
+		 
+		<link rel="stylesheet" type="text/css" href="./assets/vendor/daterangepicker/daterangepicker.css">
+	 
+		<link rel="stylesheet" type="text/css" href="./assets/css/util.css">
+		<link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+		</head>
+<nav class="navbar navbar-inverse navbar-expand-lg">
+  <div class="container-fixed">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      
+      <!-- <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-pencil"></span> WebSiteName</a> -->
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+     <ul class="nav navbar-nav navbar-left">
+        <li><a [routerLink]="['/home']"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+        
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+       
+        <li><a [routerLink]="['/login']"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> 
+        <!-- <li><a [routerLink]="['/sign-up']"><span class="glyphicon glyphicon-user"></span> Sign-up</a></li>      -->
+      </ul>
+    </div>
+  </div>
+</nav>
+
+ 
+
+
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-form-title" style="background-image: url(./assets/images/bg-01.jpg);">
+					<span class="login100-form-title-1">
+						Sign-Up
+					</span>
+				</div>
+
+				<form class="login100-form validate-form" [formGroup]="signUpForm" >
+					<div class="wrap-input100 validate-input m-b-26" data-validate="This field is required">
+							<span class="label-input100">Name</span>
+							<input class="input100" formControlName="userName" type="text" name="userName" placeholder="Enter your name">
+							<span id="NameError" class="text-danger" *ngIf="!signUpForm.controls.userName.valid && signUpForm.controls.userName.dirty">Enter a User Name</span>
+							<span class="focus-input100"></span>
+					</div>
+	
+					<div class="wrap-input100 validate-input m-b-26" data-validate="Contact number is required">
+						<span class="label-input100">Contact No.</span>
+						<input class="input100" formControlName="contactNumber" type="text" name="contactNumber" placeholder="Enter your number">
+						<span id="contactNumberError" class="text-danger" *ngIf="!signUpForm.controls.contactNumber.valid && signUpForm.controls.contactNumber.dirty">Enter a 10 digit mobile number</span>
+						<span class="focus-input100"></span>
+					</div>
+	
+					<div class="wrap-input100 validate-input m-b-26" data-validate="DOB is required">
+						<span class="label-input100">Date of Birth</span>
+						<input class="input100" formControlName="dateOfBirth" type="date" name="dateOfBirth" placeholder="Enter your date of birth">
+						<span id="dateOfBirthError" class="text-danger" *ngIf="!signUpForm.controls.dateOfBirth.valid && signUpForm.controls.dateOfBirth.dirty">Date must be less than current date!</span>
+						<span class="focus-input100"></span>
+					</div>
+										
+					<div class="wrap-input100 validate-input m-b-26" data-validate="Email Id is required">
+						<span class="label-input100">Email Id</span>
+						<input class="input100" formControlName="emailId" type="text" name="emailId" placeholder="Enter email id">
+						<span id="emailIdError" class="text-danger" *ngIf="!signUpForm.controls.emailId.valid && signUpForm.controls.emailId.dirty">Enter valid email Id</span>
+						<span class="focus-input100"></span>
+					</div>
+										
+	
+					<div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
+						<span class="label-input100">Password</span>
+						<input class="input100" formControlName="password" type="password" name="password" placeholder="Enter password">
+						<span id="passwordError" class="text-danger" *ngIf="!signUpForm.controls.password.valid && signUpForm.controls.password.dirty">Password can contain only alphabets,numbers and (@,$,*) </span>
+						<span class="focus-input100"></span>
+					</div>
+	
+					<div class="container-login100-form-btn">
+						<button (click)="signup()" class="login100-form-btn" style="align-content: center" [disabled]="!signUpForm.valid">
+							<span>Register</span>
+						</button>
+					</div>
+					<div>
+					{{successMessage}}
+				{{errorMessage}}
+			</div>
+				</form>
+				
+			</div>
+		</div>
+	</div>

@@ -1,0 +1,343 @@
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="./assets/images/dgec2.jpg" alt="Chania">
+      <div class="carousel-caption">
+        <h3>GEC Infosys</h3>
+        <p>Learning hub for all infoscions</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="./assets/images/hyd-micro.jpg" style="height:332px;width:100%;">
+      <div class="carousel-caption">
+        <h3>MICROSOFT-Hyderabad</h3>
+        <p style="color:aliceblue">Be What's Next!</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="./assets/images/goa-1.jpg" style="height:332px">
+      <div class="carousel-caption">
+        <h3>Goa</h3>
+        <p style="color:aliceblue">The sea never ends!</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>   
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+<title>Booking Form HTML Template</title>
+
+<!-- Google font -->
+<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+
+<!-- Bootstrap -->
+<link type="text/css" rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+
+<!-- Custom stlylesheet -->
+<link type="text/css" rel="stylesheet" href="./assets/css/style.css" />
+
+
+  <style>
+    .button {
+      display: inline-block;
+      border-radius: 2px;
+      background-color: #e25d0ff3;
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 18px;
+      font-family: inherit;
+      padding: 10px;
+      width: 555px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+    }
+    
+    .button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+    
+    .button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+    
+    .button:hover span {
+      padding-right: 25px;
+    }
+    
+    .button:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+    .booking-form {
+position: absolute;
+max-width: 642px;
+width: 100%;
+margin: auto;
+padding: 40px;
+overflow: hidden;
+background-image: url("./assets/img/background.jpg");
+background-size: contain;
+border-radius: 5px;
+z-index: 20;
+}
+
+.booking-form .form-header {
+text-align: center;
+position: relative;
+margin-bottom: 30px;
+}
+
+.booking-form .form-header h1 {
+font-weight: 700;
+text-transform: capitalize;
+font-size: 36px;
+margin: 0px;
+color: rgb(255, 255, 255);
+}
+.booking-form .form-label {
+position: absolute;
+top: -10px;
+left: 25px;
+opacity: 0;
+color: #ff8846;
+font-size: 11px;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 1.3px;
+height: 15px;
+line-height: 15px;
+-webkit-transition: 0.2s all;
+transition: 0.2s all;
+}
+.booking-form input[type="date"].form-control+.form-label {
+opacity: 1;
+top: 5px;
+}
+.booking-form .form-group.input-not-empty .form-label {
+opacity: 1;
+top: 5px;
+}
+.section {
+position: relative;
+height: 10vh;
+}
+
+.section .section-center {
+position: relative;
+top: 10%;
+left: 0;
+right: 0;
+-webkit-transform: translateY(-50%);
+transform: translateY(-50%);
+}
+
+#booking {
+font-family: 'Raleway', sans-serif;
+}
+
+.booking-form::before {
+content: '';
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+top: 0;
+background: rgba(0, 0, 0, 0.7);
+z-index: -1;
+}
+.booking-form .form-group {
+position: relative;
+margin-bottom: 30px;
+}
+
+.booking-form .form-control {
+background-color: rgba(255, 255, 255, 0.2);
+height: 40px;
+padding: 0px 25px;
+border: none;
+border-radius: 20px;
+color: #fff;
+-webkit-box-shadow: 0px 0px 0px 2px transparent;
+box-shadow: 0px 0px 0px 2px transparent;
+-webkit-transition: 0.2s;
+transition: 0.2s;
+}
+
+.booking-form .form-control::-webkit-input-placeholder {
+color: rgba(255, 255, 255, 0.5);
+}
+
+.booking-form .form-control:-ms-input-placeholder {
+color: rgba(255, 255, 255, 0.5);
+}
+
+.booking-form .form-control::placeholder {
+color: rgba(255, 255, 255, 0.5);
+}
+
+.booking-form .form-control:focus {
+-webkit-box-shadow: 0px 0px 0px 2px #ff8846;
+box-shadow: 0px 0px 0px 2px #ff8846;
+}
+
+.booking-form input[type="date"].form-control {
+padding-top: 16px;
+}
+
+.booking-form input[type="date"].form-control:invalid {
+color: rgba(255, 255, 255, 0.5);
+}
+.booking-form select.form-control {
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+}
+
+.booking-form select.form-control:invalid {
+color: rgba(255, 255, 255, 0.5);
+}
+
+.booking-form select.form-control+.select-arrow {
+position: absolute;
+right: 15px;
+top: 50%;
+-webkit-transform: translateY(-50%);
+transform: translateY(-50%);
+width: 32px;
+line-height: 32px;
+height: 32px;
+text-align: center;
+pointer-events: none;
+color: rgba(255, 255, 255, 0.5);
+font-size: 14px;
+}
+
+.booking-form select.form-control+.select-arrow:after {
+content: '\279C';
+display: block;
+-webkit-transform: rotate(90deg);
+transform: rotate(90deg);
+}
+
+.booking-form select.form-control option {
+color: #000;
+}
+.booking-form .form-group.input-not-empty .form-control {
+padding-top: 16px;
+}
+</style>
+</head>
+
+<nav class="navbar navbar-inverse navbar-expand-lg">
+  <div class="container-fixed">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      
+      <!-- <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-pencil"></span> WebSiteName</a> -->
+    </div>
+  
+  <div class="collapse navbar-collapse" id="myNavbar">
+   <ul class="nav navbar-nav navbar-left">
+    <li><a [routerLink]="['/adminhome']"><span class="glyphicon glyphicon-book"></span> Booking History </a></li>
+    <!-- <i class='fas fa-home' style='font-size:48px;color:red'></i> -->
+    <li><a [routerLink]="['/userdetails']"><span class="glyphicon glyphicon-user"></span> User Details </a></li>
+    <li><a [routerLink]="['/packagedetails']"><span class="glyphicon glyphicon-book"></span> View Package Details </a></li>
+    <li><a [routerLink]="['/feedbackinfo']"><span class="glyphicon glyphicon-pencil"></span> User Feedback Info</a></li> 
+    <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href=""><span class="glyphicon glyphicon-cog"></span><b> {{name}}</b> <span class="caret"></span></a>
+         <ul class="dropdown-menu">
+           <li><a (click)="logout()">Logout <span class="glyphicon glyphicon-log-out"></span></a></li>
+           <li><a [routerLink]="['/updatepackagedetails']">Update-Package-Details<span class="glyphicon glyphicon-book"></span></a></li>
+          </ul>
+     </li>
+  </ul>
+  
+  </div>
+</div>
+</nav>
+    <div *ngIf="success!=null">
+
+    <section class="destinations-area section-gap">
+      <div class="container1"> 
+       
+        
+            <div *ngFor="let i of success"> 
+          <div class="col-lg-4 ">
+            <div class="single-destinations">
+              <div class="thumb">
+                <!-- <img src=".\assets\img\d1.jpg" alt=""> -->
+              </div>
+              <div class="details">
+                  <h4>{{i.packageName}}</h4>
+                  <p>
+                   {{i.location}}
+                  </p>
+                  <ul class="package-list">
+                    <li class="d-flex justify-content-between align-items-center">
+                      <span>Package Id</span>
+                      <span>{{i.packageId}}</span>
+                    </li>
+                    <li class="d-flex justify-content-between align-items-center">
+                      <span>Places Included</span>
+                      <span>{{i.placesIncluded}}</span>
+                    </li>
+                    
+                    <li class="d-flex justify-content-between align-items-center">
+                      <span>Number Of Days</span>
+                      <span>{{i.numberOfDays}}</span>
+                    </li>
+                    <li class="d-flex justify-content-between align-items-center">
+                      <span>Price per person</span>
+                      <a [routerLink]="['/booking']" class="price-btn">{{i.pricePerHead|currency:'INR':true}}</a>
+                    </li>													
+                  </ul>
+                </div>
+            </div>
+          </div>
+          </div>
+        </div>                                                            
+        
+      	
+    </section>
+  </div> 

@@ -1,0 +1,10 @@
+.nav.navbar-nav.navbar-left li a {
+    color: rgb(27, 27, 27);
+    font-size: 15px;
+    padding-right: 75px;
+    padding-left: 75px
+}
+
+a{
+    cursor: pointer;
+  }

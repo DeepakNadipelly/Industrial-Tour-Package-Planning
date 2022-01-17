@@ -1,0 +1,6 @@
+.nav.navbar-nav.navbar-left li a {
+    color: rgb(27, 27, 27);
+    font-size: 15px;
+    padding-right: 65px;
+    padding-left:65px;
+}

@@ -1,0 +1,31 @@
+.nav.navbar-nav.navbar-left li a {
+    color: rgb(27, 27, 27);
+    font-size: 15px;
+    padding-right: 75px;
+    padding-left: 75px
+}
+#content{
+    margin:0 auto;
+}
+.im{
+    padding-left: 500px;
+}
+.line1{
+    padding-left: 400px;
+    font-size: 45px;
+    color:rgb(46, 155, 46)
+}
+.line2{
+    padding-left: 225px;
+    font-size: 25px;
+    color:rgb(56, 58, 56)
+}
+.line3{
+    padding-left: 475px;
+    font-size: 20px;
+    color:rgb(56, 58, 56)
+}
+.line4{
+    padding-left: 525px;
+}
+

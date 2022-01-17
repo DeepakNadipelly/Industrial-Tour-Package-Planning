@@ -1,0 +1,36 @@
+
+.nav.navbar-nav.navbar-left li a {
+    color: rgb(27, 27, 27);
+    font-size: 15px;
+    padding-right: 75px;
+    padding-left: 75px
+}
+
+.button1{
+    display: inline-block;
+    border-radius: 2px;
+    background-color: #e25d0ff3;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    font-family: inherit;
+    padding: 10px;
+    width: 260px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    
+}
+
+.control-label1{
+    font-size:20px;
+}
+
+.control-label2{
+    font-size:15px;
+}
+
+a{
+    cursor: pointer;
+  }
